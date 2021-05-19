@@ -7,6 +7,9 @@ import { auth } from "./firebase";
 import firebase from "firebase/app";
 import Button from "@material-ui/core/Button/Button";
 import { log } from "./consoleHelper";
+import { useLoading } from "./useLoading";
+import Box from "@material-ui/core/Box";
+import LinearProgress from "@material-ui/core/LinearProgress";
 
 const LoginContainer = styled.div`
   background-color: "#ffffff";
@@ -20,11 +23,13 @@ const LoginContainer = styled.div`
 `;
 function App() {
   const [authUser, setAuthUser] = useState<firebase.User | null>(null);
-  
+  const { isLoading, setIsLoading } = useLoading();
+
   useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
       log("Auth iser on state changed: ");
       log(authUser);
+      setIsLoading(false);
       setAuthUser(authUser);
     });
   }, []);
@@ -49,8 +54,13 @@ function App() {
       <div>
         <span>Project: </span>my-react-app-sample-google-login
       </div>
+
       <LoginContainer>
-        {!authUser ? (
+        {isLoading ? (
+          <Box style={{ width: "50%" }}>
+            <LinearProgress color="secondary" />
+          </Box>
+        ) : !authUser ? (
           <GoogleLoginButton setAuthUser={setAuthUser} />
         ) : (
           <LogOutButton />
