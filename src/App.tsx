@@ -39,12 +39,7 @@ function App() {
   };
   return (
     <div className="App">
-      <div>SMILE :)</div>
-      <div></div>
-      <div>
-        <span>Project: </span>my-react-app-sample-google-login
-      </div>
-
+      <div style={{ height: "5rem" }}>my-react-app-sample-google-login</div>
       <LoginContainer>
         {isLoading ? (
           <Box style={{ width: "50%" }}>
