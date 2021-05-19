@@ -39,8 +39,8 @@ function App() {
   };
   return (
     <div className="App">
-      <div style={{ height: "5rem" }}>my-react-app-sample-google-login</div>
       <LoginContainer>
+        <div style={{ height: "5rem" }}>my-react-app-sample-google-login</div>
         {isLoading ? (
           <Box style={{ width: "50%" }}>
             <LinearProgress color="secondary" />
