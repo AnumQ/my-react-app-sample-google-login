@@ -32,7 +32,7 @@ const firebaseConfig = {
 };
 ```
 
-with your own project's settings in Firebase
+with your own Firebase project's settings
 
 ## Development
 
