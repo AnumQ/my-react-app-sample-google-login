@@ -12,7 +12,7 @@ This project was boaotstrapped with [Create React App](https://github.com/facebo
 
 1.  Set up Authentication in Firebase
 
-Enable 'Google' in 'Sign-in method' tab.
+    Enable 'Google' in 'Sign-in method' tab.
 
 2.  Set up Authentication in Project
 
