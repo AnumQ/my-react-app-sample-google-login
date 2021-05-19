@@ -12,27 +12,27 @@ This project was boaotstrapped with [Create React App](https://github.com/facebo
 
 1.  Set up Authentication in Firebase
 
-        Enable 'Google' in 'Sign-in method' tab.
+Enable 'Google' in 'Sign-in method' tab.
 
 2.  Set up Authentication in Project
 
-            Open firebase.ts.
+Open firebase.ts.
 
-            Replace
+Replace
 
-            ```
-            const firebaseConfig = {
-                apiKey: "xxxxxxxx",
-                authDomain: "xxxxxxxx",
-                projectId: "xxxxxxxx",
-                storageBucket: "xxxxxxxx",
-                messagingSenderId: "xxxxxxxx",
-                appId: "xxxxxxxx",
-                measurementId: "xxxxxxxx",
-            };
-            ```
+```
+const firebaseConfig = {
+    apiKey: "xxxxxxxx",
+    authDomain: "xxxxxxxx",
+    projectId: "xxxxxxxx",
+    storageBucket: "xxxxxxxx",
+    messagingSenderId: "xxxxxxxx",
+    appId: "xxxxxxxx",
+    measurementId: "xxxxxxxx",
+};
+```
 
-            with your own Firebase project's settings
+with your own Firebase project's settings
 
 ## Development
 
