@@ -20,7 +20,7 @@ Open firebase.ts.
 
 Replace
 
-````
+```
 const firebaseConfig = {
 apiKey: "AIzaSyBXPMdHF4GnC24GxeVYDa5-W1uqE-Fs0Pw",
 authDomain: "signin-f492c.firebaseapp.com",
@@ -39,4 +39,3 @@ with your own project's settings in Firebase
 ### npm install
 
 ### npm start
-````
