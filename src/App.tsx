@@ -10,6 +10,7 @@ import { useLoading } from "./hooks/useLoading";
 import Box from "@material-ui/core/Box";
 import LinearProgress from "@material-ui/core/LinearProgress";
 import { useAuthUser } from "./hooks/useAuthUser";
+import { FlexRow } from "./Components/UI/shared";
 
 const LoginContainer = styled.div`
   background-color: "#ffffff";
@@ -21,9 +22,20 @@ const LoginContainer = styled.div`
   font-size: calc(10px + 2vmin);
   color: rgb(0, 0, 0);
 `;
+
+const Container = styled.div`
+  background-color: clear;
+  height: 100%;
+  width: 100%;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding-top: 1rem;
+`;
+
 function App() {
   const { authUser, isLoading } = useAuthUser();
 
+  const projectTitle = "my-react-app-sample-google-login";
   const LogOutButton = () => {
     return (
       <Button
@@ -39,18 +51,23 @@ function App() {
   };
   return (
     <div className="App">
-      <LoginContainer>
-        <div style={{ height: "5rem" }}>my-react-app-sample-google-login</div>
+      <Container>
         {isLoading ? (
           <Box style={{ width: "50%" }}>
             <LinearProgress color="secondary" />
           </Box>
         ) : !authUser ? (
-          <GoogleLoginButton />
+          <LoginContainer>
+            <div style={{ height: "5rem" }}>{projectTitle}</div>
+            <GoogleLoginButton />
+          </LoginContainer>
         ) : (
-          <LogOutButton />
+          <FlexRow justifyContent="space-between" alignItems="center">
+            <div>{projectTitle}</div>
+            <LogOutButton />
+          </FlexRow>
         )}
-      </LoginContainer>
+      </Container>
     </div>
   );
 }
