@@ -7,6 +7,13 @@ type FlexProps = {
   width?: string;
   minWidth?: string;
 };
+
+// FLEX
+export const Flex = styled.div<FlexProps>`
+  display: flex;
+  align-items: center;
+`;
+
 export const FlexRow = styled.div<FlexProps>`
   display: flex;
   flex-direction: row;
@@ -27,18 +34,28 @@ export const FlexColumn = styled.div<FlexProps>`
 export const Menu = styled.div`
   display: flex;
   margin-bottom: 1rem;
-  justify-content: flex-end;
+  justify-content: space-between;
   height: 2rem;
 `;
 
 // Container on each page
 export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  background-color: clear;
+  height: 100%;
+  width: 100%;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding-top: 1rem;
 `;
 
-export const Flex = styled.div<FlexProps>`
+// Container for login components
+export const CenterContainer = styled.div`
+  background-color: "#ffffff";
+  min-height: 85vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: rgb(0, 0, 0);
 `;
