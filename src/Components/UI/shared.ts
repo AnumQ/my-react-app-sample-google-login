@@ -41,6 +41,7 @@ export const Menu = styled.div`
   margin-bottom: 1rem;
   justify-content: space-between;
   height: 2rem;
+  padding-top: 1rem;
 `;
 
 // Container on each page
