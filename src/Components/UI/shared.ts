@@ -15,6 +15,8 @@ export const Flex = styled.div<FlexProps>`
   display: flex;
   align-items: center;
   height: ${({ height, fullHeight }) => (fullHeight ? "100vh" : `${height}`)};
+  justify-content: ${({ justifyContent }) => `${justifyContent}`};
+  width: ${({ width }) => `${width}`};
 `;
 
 export const FlexRow = styled.div<FlexProps>`
