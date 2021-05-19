@@ -4,8 +4,10 @@ import { FaGoogle } from "react-icons/fa";
 import firebase from "firebase/app";
 import { log } from "./consoleHelper";
 import { auth } from "./firebase";
+import { useAuthUser } from "./Contexts/useAuthUser";
 
-export const GoogleLoginButton = ({ setAuthUser }: { setAuthUser: any }) => {
+export const GoogleLoginButton = () => {
+  const { setAuthUser } = useAuthUser();
   const handleLogIn = () => {
     const provider = new firebase.auth.GoogleAuthProvider();
     provider.addScope("profile");

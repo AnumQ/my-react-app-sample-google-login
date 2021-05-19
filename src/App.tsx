@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
-import { FaGoogle } from "react-icons/fa";
 import { GoogleLoginButton } from "./GoogleLoginButton";
 import styled from "styled-components";
 import { auth } from "./firebase";
 import firebase from "firebase/app";
 import Button from "@material-ui/core/Button/Button";
 import { log } from "./consoleHelper";
-import { useLoading } from "./useLoading";
+import { useLoading } from "./hooks/useLoading";
 import Box from "@material-ui/core/Box";
 import LinearProgress from "@material-ui/core/LinearProgress";
+import { useAuthUser } from "./Contexts/useAuthUser";
 
 const LoginContainer = styled.div`
   background-color: "#ffffff";
@@ -22,17 +22,7 @@ const LoginContainer = styled.div`
   color: rgb(0, 0, 0);
 `;
 function App() {
-  const [authUser, setAuthUser] = useState<firebase.User | null>(null);
-  const { isLoading, setIsLoading } = useLoading();
-
-  useEffect(() => {
-    auth.onAuthStateChanged((authUser) => {
-      log("Auth iser on state changed: ");
-      log(authUser);
-      setIsLoading(false);
-      setAuthUser(authUser);
-    });
-  }, []);
+  const { authUser, isLoading } = useAuthUser();
 
   const LogOutButton = () => {
     return (
@@ -61,7 +51,7 @@ function App() {
             <LinearProgress color="secondary" />
           </Box>
         ) : !authUser ? (
-          <GoogleLoginButton setAuthUser={setAuthUser} />
+          <GoogleLoginButton />
         ) : (
           <LogOutButton />
         )}
