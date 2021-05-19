@@ -4,11 +4,11 @@ This project was boaotstrapped with [Create React App](https://github.com/facebo
 
 ## Project Setup
 
-#### 1. Clone the repo
+##### 1. Clone the repo
 
-#### 2. Rename `my-react-app-sample-google-login` with `your project name`
+##### 2. Rename `my-react-app-sample-google-login` with `your project name`
 
-#### 3. Connect Firebase backend
+##### 3. Connect Firebase backend
 
 ### Set up Authentication in Firebase
 
