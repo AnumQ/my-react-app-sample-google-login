@@ -4,7 +4,7 @@ import { FaGoogle } from "react-icons/fa";
 import firebase from "firebase/app";
 import { log } from "./consoleHelper";
 import { auth } from "./firebase";
-import { useAuthUser } from "./Contexts/useAuthUser";
+import { useAuthUser } from "./hooks/useAuthUser";
 
 export const GoogleLoginButton = () => {
   const { setAuthUser } = useAuthUser();

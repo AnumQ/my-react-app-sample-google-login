@@ -9,7 +9,7 @@ import { log } from "./consoleHelper";
 import { useLoading } from "./hooks/useLoading";
 import Box from "@material-ui/core/Box";
 import LinearProgress from "@material-ui/core/LinearProgress";
-import { useAuthUser } from "./Contexts/useAuthUser";
+import { useAuthUser } from "./hooks/useAuthUser";
 
 const LoginContainer = styled.div`
   background-color: "#ffffff";
