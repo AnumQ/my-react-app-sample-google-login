@@ -4,13 +4,13 @@ import "firebase/database";
 import "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBXPMdHF4GnC24GxeVYDa5-W1uqE-Fs0Pw",
-  authDomain: "signin-f492c.firebaseapp.com",
-  projectId: "signin-f492c",
-  storageBucket: "signin-f492c.appspot.com",
-  messagingSenderId: "103968433370",
-  appId: "1:103968433370:web:b1e5139e94229b93d031e3",
-  measurementId: "G-4S4WJKKVH0",
+  apiKey: "xxxxxxxx",
+  authDomain: "xxxxxxxx",
+  projectId: "xxxxxxxx",
+  storageBucket: "xxxxxxxx",
+  messagingSenderId: "xxxxxxxx",
+  appId: "xxxxxxxx",
+  measurementId: "xxxxxxxx",
 };
 
 const app = firebase.initializeApp(firebaseConfig);
