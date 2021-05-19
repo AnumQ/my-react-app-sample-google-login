@@ -6,11 +6,10 @@ import { auth } from "./firebase";
 import firebase from "firebase/app";
 import Button from "@material-ui/core/Button/Button";
 import { log } from "./consoleHelper";
-import { useLoading } from "./hooks/useLoading";
 import Box from "@material-ui/core/Box";
 import LinearProgress from "@material-ui/core/LinearProgress";
 import { useAuthUser } from "./hooks/useAuthUser";
-import { FlexRow } from "./Components/UI/shared";
+import { FlexRow, Flex } from "./Components/UI/shared";
 
 const LoginContainer = styled.div`
   background-color: "#ffffff";
@@ -50,25 +49,25 @@ function App() {
     );
   };
   return (
-    <div className="App">
-      <Container>
-        {isLoading ? (
-          <Box style={{ width: "50%" }}>
+    <Container>
+      {isLoading ? (
+        <Flex style={{ height: "100vh" }}>
+          <Box style={{ width: "100%" }}>
             <LinearProgress color="secondary" />
           </Box>
-        ) : !authUser ? (
-          <LoginContainer>
-            <div style={{ height: "5rem" }}>{projectTitle}</div>
-            <GoogleLoginButton />
-          </LoginContainer>
-        ) : (
-          <FlexRow justifyContent="space-between" alignItems="center">
-            <div>{projectTitle}</div>
-            <LogOutButton />
-          </FlexRow>
-        )}
-      </Container>
-    </div>
+        </Flex>
+      ) : !authUser ? (
+        <LoginContainer>
+          <div style={{ height: "5rem" }}>{projectTitle}</div>
+          <GoogleLoginButton />
+        </LoginContainer>
+      ) : (
+        <FlexRow justifyContent="space-between" alignItems="center">
+          <div>{projectTitle}</div>
+          <LogOutButton />
+        </FlexRow>
+      )}
+    </Container>
   );
 }
 
