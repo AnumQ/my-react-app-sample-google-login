@@ -10,11 +10,11 @@ This project was boaotstrapped with [Create React App](https://github.com/facebo
 
 #### 3. Connect Firebase backend
 
-##### 1. Set up Authentication in Firebase
+\_ 1. Set up Authentication in Firebase
 
     Enable 'Google' in 'Sign-in method' tab.
 
-##### 2. Set up Authentication in Project
+\_ 2. Set up Authentication in Project
 
 Open firebase.ts.
 
