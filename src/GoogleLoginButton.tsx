@@ -41,7 +41,7 @@ export const GoogleLoginButton = () => {
   return (
     <>
       <Button
-        style={{ background: "lightGreen", paddingRight: 10 }}
+        style={{ background: "lightBlue", paddingRight: 10 }}
         onClick={() => {
           handleLogIn();
         }}
